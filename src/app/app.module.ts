@@ -8,8 +8,7 @@ import {AppComponent} from './app.component';
 import {ApiService} from './shared';
 import {ToastrModule} from 'ngx-toastr';
 import {removeNgStyles, createNewHosts} from '@angularclass/hmr';
-import {PinkToast} from './pink.toast';
-import {CustomToast} from './custom-toast/custom-toast.component';
+import {CustomComponent} from './custom-component/custom-component.component';
 
 @NgModule({
   imports: [
@@ -21,13 +20,11 @@ import {CustomToast} from './custom-toast/custom-toast.component';
   ],
   declarations: [
     AppComponent,
-    PinkToast,
-    CustomToast
+    CustomComponent
   ],
   providers: [
     ApiService
   ],
-  entryComponents: [PinkToast, CustomToast],
   bootstrap: [AppComponent]
 })
 export class AppModule {

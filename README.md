@@ -1,1 +1,1 @@
-# ngx-toastr-MyDemoProject
+# template project
