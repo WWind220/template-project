@@ -21,7 +21,7 @@
   </button>
 
   <button type="button" class="btn btn-secondary" placement="left"
-          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on left">
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle={{title}}>
     Popover on left
   </button>
   </div>
@@ -43,12 +43,23 @@
       Alternatively you can take full manual control over popover opening / closing events.
     </p>
 
-    <button type="button" class="btn btn-secondary" ngbPopover="What a great tip!" triggers="manual" #p="ngbPopover" (click)="p.open()" popoverTitle="Pop title">
+    <button type="button" class="btn btn-secondary" ngbPopover="What a great tip!" triggers="manual" #p="ngbPopover"  (click)="open(p)" popoverTitle="Pop title">
       Click me to open a popover
     </button>
-    <button type="button" class="btn btn-secondary" (click)="p.close()">
+    <button type="button" class="btn btn-secondary" (click)="close(p)">
       Click me to close a popover
     </button>
+
+  </div>
+
+  <hr><hr>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-secondary">
+
+      </button>
+      <my-popover [title] = "title"></my-popover>
+    </div>
   </div>
 
 </main>

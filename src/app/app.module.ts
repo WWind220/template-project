@@ -9,7 +9,7 @@ import {AppComponent} from './app.component';
 import {ApiService} from './shared';
 import {ToastrModule} from 'ngx-toastr';
 import {removeNgStyles, createNewHosts} from '@angularclass/hmr';
-import {CustomComponent} from './custom-component/custom-component.component';
+import {PopoverComponent} from './custom-component/popover.component';
 
 @NgModule({
   imports: [
@@ -22,7 +22,7 @@ import {CustomComponent} from './custom-component/custom-component.component';
   ],
   declarations: [
     AppComponent,
-    CustomComponent
+    PopoverComponent
   ],
   providers: [
     ApiService

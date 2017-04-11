@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {ApiService} from './shared';
+// import {ApiService} from './shared';
+import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 
 import '../style/app.scss';
 
@@ -10,8 +11,13 @@ import '../style/app.scss';
 })
 export class AppComponent {
   title: string;
-
-  constructor(private api: ApiService) {
-    this.title = this.api.title;
+  constructor() {
+    this.title = 'My custom title';
+  }
+  open( p: NgbPopover) {
+    p.open();
+  }
+  close( p: NgbPopover) {
+    p.close();
   }
 }
