@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 // import {ApiService} from './shared';
-import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
+import {NgbPopover} from '@ng-bootstrap/ng-bootstrap';
 
 import '../style/app.scss';
 
@@ -11,13 +11,23 @@ import '../style/app.scss';
 })
 export class AppComponent {
   title: string;
+  prop: boolean;
+
   constructor() {
     this.title = 'My custom title';
+    this.prop = false;
   }
-  open( p: NgbPopover) {
+
+  open(p: NgbPopover) {
+    p.ngbPopover = 'hi';
     p.open();
   }
-  close( p: NgbPopover) {
+
+  close(p: NgbPopover) {
     p.close();
+  }
+
+  changeProperty() {
+    this.prop = !this.prop;
   }
 }

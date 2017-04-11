@@ -61,6 +61,14 @@
       <my-popover [title] = "title"></my-popover>
     </div>
   </div>
+<hr><hr>
+  <div class="row active" >
+    <div class="col-md-12">
+      <h2>Show/Hide popover using class property</h2>
 
+      <button class="btn btn-primary" (click)="changeProperty()" >Change</button>{{prop}}
+      <input type="text" ngbPopover="{{prop?open(p):close(p)}}"  triggers="manual"  #p="ngbPopover" >
+    </div>
+  </div>
 </main>
 
