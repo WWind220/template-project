@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
 
 
 @Component({
-  selector: '<exa-custom-component>',
+  selector: '<custom-component>',
   templateUrl: 'custom-component.component.html',
   styleUrls: ['custom-component.component.scss'],
 })
